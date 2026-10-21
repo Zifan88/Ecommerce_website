@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LUMORA | Modern Fashion Store</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/a2e0e6ad65.js"></script>
+</head>
+
+<body>
+
+   
+
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+            <a href="#" class="logo">LUMORA</a>
+
+            <nav class="nav-menu">
+                <a href="#home">Home</a>
+                <a href="#shop">Shop</a>
+                <a href="#categories">Categories</a>
+                <a href="#about">About</a>
+            </nav>
+
+            <div class="nav-actions">
+
+                <button class="icon-btn" id="searchBtn" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+                <button class="icon-btn" id="wishlistBtn" aria-label="Wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="badge" id="wishlistCount">0</span>
+                </button>
+
+                <button class="icon-btn cart-btn" id="cartBtn" aria-label="Shopping cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="badge" id="cartCount">0</span>
+                </button>
+
+                <button class="menu-btn" id="menuBtn" aria-label="Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+   
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#categories">Categories</a>
+        <a href="#about">About</a>
+
+    </div>
+
+
+    
+    <div class="search-overlay" id="searchOverlay">
+
+        <div class="search-box">
+
+            <button class="close-search" id="closeSearch">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h2>What are you looking for?</h2>
+
+            <div class="search-input-wrapper">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search products..."
+                >
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <p class="hero-small-title">NEW COLLECTION 2026</p>
+
+                <h1>
+                    Discover
+                    <span>Your Style.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Curated essentials designed for modern living.
+                    Discover timeless pieces made to elevate your everyday style.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#shop" class="btn btn-dark">
+                        Shop Collection
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <a href="#categories" class="btn btn-light">
+                        Explore Categories
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-image">
+
+                <img
+                    src="assets/fashion-collection.png"
+                    alt="Fashion collection displayed on a clothing rack"
+                >
+
+                <div class="hero-card">
+
+                    <span>Trending Now</span>
+
+                    <strong>Everyday Essentials</strong>
+
+                    <a href="#shop">
+                        Explore →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="categories section" id="categories">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <p class="eyebrow">SHOP BY CATEGORY</p>
+
+                        <h2>Find Your Favorites</h2>
+                    </div>
+
+                    <p>
+                        Explore our carefully selected collections
+                        designed for every style.
+                    </p>
+
+                </div>
+
+
+                <div class="category-grid">
+
+                    <button class="category-card" data-category="Men">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?auto=format&fit=crop&w=800&q=80"
+                            alt="Men's fashion"
+                        >
+
+                        <div class="category-overlay">
+
+                            <span>01</span>
+
+                            <h3>Men</h3>
+
+                            <p>Explore Collection →</p>
+
+                        </div>
+
+                    </button>
+
+
+                    <button class="category-card" data-category="Women">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80"
+                            alt="Women's fashion"
+                        >
+
+                        <div class="category-overlay">
+
+                            <span>02</span>
+
+                            <h3>Women</h3>
+
+                            <p>Explore Collection →</p>
+
+                        </div>
+
+                    </button>
+
+
+                    <button class="category-card" data-category="Shoes">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80"
+                            alt="Shoes"
+                        >
+
+                        <div class="category-overlay">
+
+                            <span>03</span>
+
+                            <h3>Shoes</h3>
+
+                            <p>Explore Collection →</p>
+
+                        </div>
+
+                    </button>
+
+
+                    <button class="category-card" data-category="Accessories">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1523779917675-b6ed3a42a561?auto=format&fit=crop&w=800&q=80"
+                            alt="Accessories"
+                        >
+
+                        <div class="category-overlay">
+
+                            <span>04</span>
+
+                            <h3>Accessories</h3>
+
+                            <p>Explore Collection →</p>
+
+                        </div>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+   
+
+        <section class="products section" id="shop">
+
+            <div class="container">
+
+                <div class="section-heading products-heading">
+
+                    <div>
+
+                        <p class="eyebrow">OUR COLLECTION</p>
+
+                        <h2>Featured Products</h2>
+
+                    </div>
+
+                    <a href="#shop" class="view-all">
+                        View All →
+                    </a>
+
+                </div>
+
+
+                <!-- FILTERS -->
+
+                <div class="shop-controls">
+
+                    <div class="category-filters">
+
+                        <button
+                            class="filter-btn active"
+                            data-filter="All"
+                        >
+                            All
+                        </button>
+
+                        <button
+                            class="filter-btn"
+                            data-filter="Men"
+                        >
+                            Men
+                        </button>
+
+                        <button
+                            class="filter-btn"
+                            data-filter="Women"
+                        >
+                            Women
+                        </button>
+
+                        <button
+                            class="filter-btn"
+                            data-filter="Shoes"
+                        >
+                            Shoes
+                        </button>
+
+                        <button
+                            class="filter-btn"
+                            data-filter="Accessories"
+                        >
+                            Accessories
+                        </button>
+
+                    </div>
+
+
+                    <select id="sortSelect" class="sort-select">
+
+                        <option value="default">
+                            Sort By
+                        </option>
+
+                        <option value="low">
+                            Price: Low to High
+                        </option>
+
+                        <option value="high">
+                            Price: High to Low
+                        </option>
+
+                        <option value="rating">
+                            Highest Rated
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- PRODUCTS WILL COME FROM JAVASCRIPT -->
+
+                <div
+                    class="product-grid"
+                    id="productGrid"
+                ></div>
+
+
+                <div class="no-products" id="noProducts">
+
+                    <i class="fa-regular fa-face-frown"></i>
+
+                    <h3>No products found</h3>
+
+                    <p>
+                        Try another search or category.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+     
+
+        <section class="promo section">
+
+            <div class="container">
+
+                <div class="promo-box">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            LUMORA MEMBERS
+                        </p>
+
+                        <h2>
+                            Get 15% off your first order.
+                        </h2>
+
+                        <p>
+                            Join our community and receive
+                            exclusive offers and early access.
+                        </p>
+
+                    </div>
+
+                    <a href="#newsletter" class="btn btn-light">
+                        Join Now
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+      
+
+        <section class="about section" id="about">
+
+            <div class="container about-grid">
+
+                <div class="about-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1000&q=80"
+                        alt="Lumora fashion collection"
+                    >
+
+                </div>
+
+
+                <div class="about-content">
+
+                    <p class="eyebrow">
+                        ABOUT LUMORA
+                    </p>
+
+                    <h2>
+                        Simple pieces.
+                        <span>Better everyday.</span>
+                    </h2>
+
+                    <p>
+                        Lumora is built around the idea that great style
+                        does not need to be complicated. We create carefully
+                        selected pieces that balance comfort, quality and
+                        modern design.
+                    </p>
+
+                    <p>
+                        From everyday essentials to statement pieces,
+                        every collection is designed to fit naturally
+                        into your lifestyle.
+                    </p>
+
+                    <a href="#shop" class="text-link">
+                        Discover our collection →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+        <section class="newsletter section" id="newsletter">
+
+            <div class="container">
+
+                <div class="newsletter-content">
+
+                    <p class="eyebrow">
+                        STAY IN THE LOOP
+                    </p>
+
+                    <h2>
+                        Get style updates in your inbox.
+                    </h2>
+
+                    <p>
+                        Subscribe for new arrivals, exclusive offers
+                        and fashion inspiration.
+                    </p>
+
+                    <form id="newsletterForm" class="newsletter-form">
+
+                        <input
+                            type="email"
+                            id="emailInput"
+                            placeholder="Enter your email address"
+                            required
+                        >
+
+                        <button type="submit" class="btn btn-dark">
+                            Subscribe
+                        </button>
+
+                    </form>
+
+                    <p
+                        class="newsletter-message"
+                        id="newsletterMessage"
+                    ></p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <aside class="cart-sidebar" id="cartSidebar">
+
+        <div class="cart-header">
+
+            <div>
+
+                <p class="eyebrow">YOUR BAG</p>
+
+                <h2>Shopping Cart</h2>
+
+            </div>
+
+            <button
+                class="close-cart"
+                id="closeCart"
+                aria-label="Close cart"
+            >
+                <span aria-hidden="true">&times;</span>
+            </button>
+
+        </div>
+
+
+        <div class="cart-items" id="cartItems">
+
+            <!-- CART ITEMS WILL BE GENERATED BY JAVASCRIPT -->
+
+        </div>
+
+
+        <div class="empty-cart" id="emptyCart">
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            <h3>Your bag is empty</h3>
+
+            <p>
+                Add some products to get started.
+            </p>
+
+        </div>
+
+
+        <div class="cart-footer">
+
+            <div class="subtotal-row">
+
+                <span>Subtotal</span>
+
+                <strong id="cartTotal">
+                    ৳0
+                </strong>
+
+            </div>
+
+            <p class="shipping-note">
+                Shipping calculated at checkout.
+            </p>
+
+            <button class="checkout-btn" id="checkoutBtn">
+                Checkout
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+    </aside>
+
+    <div
+        class="payment-method-overlay"
+        id="paymentMethodOverlay"
+        aria-hidden="true"
+    >
+        <section
+            class="payment-method-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="paymentMethodTitle"
+        >
+            <button
+                class="order-summary-close"
+                id="paymentMethodClose"
+                type="button"
+                aria-label="Close payment method"
+            >
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <p class="eyebrow">PAYMENT</p>
+            <h2 id="paymentMethodTitle">Choose a payment method</h2>
+            <p class="order-demo-note">Select how you would like to pay.</p>
+            <form id="paymentMethodForm">
+                <label class="payment-method-option">
+                    <input type="radio" name="paymentMethod" value="Card" required>
+                    <span>
+                        <strong>Card</strong>
+                        <small>Demo only — no card details or payment required</small>
+                    </span>
+                </label>
+                <label class="payment-method-option">
+                    <input type="radio" name="paymentMethod" value="Cash on delivery" required>
+                    <span>
+                        <strong>Cash on delivery</strong>
+                        <small>Pay in cash when your order arrives</small>
+                    </span>
+                </label>
+                <div class="payment-method-actions">
+                    <button class="payment-cancel-btn" id="paymentMethodCancel" type="button">
+                        Back to cart
+                    </button>
+                    <button class="checkout-btn" type="submit">
+                        Place order
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <div
+        class="order-summary-overlay"
+        id="orderSummaryOverlay"
+        aria-hidden="true"
+    >
+        <section
+            class="order-summary"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="orderSummaryTitle"
+        >
+            <button
+                class="order-summary-close"
+                id="orderSummaryClose"
+                type="button"
+                aria-label="Close order summary"
+            >
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <p class="eyebrow">YOUR RECENT ORDER</p>
+            <h2 id="orderSummaryTitle">Order summary</h2>
+            <p class="order-demo-note">Demo checkout — no payment was processed.</p>
+            <div class="order-summary-items" id="orderSummaryItems"></div>
+            <div class="order-summary-payment">
+                <span>Payment method</span>
+                <strong id="orderSummaryPayment"></strong>
+            </div>
+            <div class="order-summary-total">
+                <span>Total</span>
+                <strong id="orderSummaryTotal">৳0</strong>
+            </div>
+        </section>
+    </div>
+
+    
+
+    <div class="product-modal-overlay" id="productModal">
+
+        <div class="product-modal">
+
+            <button
+                class="modal-close"
+                id="modalClose"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div
+                class="product-modal-content"
+                id="productModalContent"
+            >
+
+                <!-- PRODUCT DETAILS GENERATED BY JS -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+  
+
+    <div class="toast" id="toast">
+
+        <i class="fa-solid fa-circle-check"></i>
+
+        <span id="toastMessage">
+            Product added to cart
+        </span>
+
+    </div>
+
+
+ 
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+
+                    <a href="#" class="logo">
+                        LUMORA
+                    </a>
+
+                    <p>
+                        Modern essentials for everyday style.
+                    </p>
+
+                    <div class="social-links">
+
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-brands fa-pinterest-p"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>Shop</h4>
+
+                    <a href="#shop">All Products</a>
+                    <a href="#categories">Men</a>
+                    <a href="#categories">Women</a>
+                    <a href="#categories">Shoes</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>Help</h4>
+
+                    <a href="#">Shipping</a>
+                    <a href="#">Returns</a>
+                    <a href="#">Size Guide</a>
+                    <a href="#">Contact Us</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>Company</h4>
+
+                    <a href="#about">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
